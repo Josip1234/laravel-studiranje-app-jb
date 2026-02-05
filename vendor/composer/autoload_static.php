@@ -501,11 +501,13 @@ class ComposerStaticInitc514d8f7b9fc5970bdd94287905ef584
         array (
             0 => __DIR__ . '/../..' . '/database/seeders',
             1 => __DIR__ . '/..' . '/laravel/pint/database/seeders',
+            2 => __DIR__ . '/..' . '/fly-apps/dockerfile-laravel/database/seeders',
         ),
         'Database\\Factories\\' =>
         array (
             0 => __DIR__ . '/../..' . '/database/factories',
             1 => __DIR__ . '/..' . '/laravel/pint/database/factories',
+            2 => __DIR__ . '/..' . '/fly-apps/dockerfile-laravel/database/factories',
         ),
         'Cron\\' =>
         array (
@@ -527,13 +529,22 @@ class ComposerStaticInitc514d8f7b9fc5970bdd94287905ef584
         array (
             0 => __DIR__ . '/../..' . '/app',
             1 => __DIR__ . '/..' . '/laravel/pint/app',
+            2 => __DIR__ . '/..' . '/fly-apps/dockerfile-laravel/app',
         ),
     );
 
     public static $classMap = array (
+        'App\\Commands\\GenerateCommand' => __DIR__ . '/..' . '/fly-apps/dockerfile-laravel/app/Commands/GenerateCommand.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\FakultetController' => __DIR__ . '/../..' . '/app/Http/Controllers/FakultetController.php',
+        'App\\Http\\Controllers\\StudentController' => __DIR__ . '/../..' . '/app/Http/Controllers/StudentController.php',
+        'App\\Http\\Middleware\\CheckStudentMjestoNotNull' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckStudentMjestoNotNull.php',
+        'App\\Models\\Fakultet' => __DIR__ . '/../..' . '/app/Models/Fakultet.php',
+        'App\\Models\\Student' => __DIR__ . '/../..' . '/app/Models/Student.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\Services\\File' => __DIR__ . '/..' . '/fly-apps/dockerfile-laravel/app/Services/File.php',
+        'App\\Services\\Scanner' => __DIR__ . '/..' . '/fly-apps/dockerfile-laravel/app/Services/Scanner.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -658,6 +669,8 @@ class ComposerStaticInitc514d8f7b9fc5970bdd94287905ef584
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\FakultetSeeder' => __DIR__ . '/../..' . '/database/seeders/FakultetSeeder.php',
+        'Database\\Seeders\\StudentSeeder' => __DIR__ . '/../..' . '/database/seeders/StudentSeeder.php',
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
         'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
@@ -6785,6 +6798,8 @@ class ComposerStaticInitc514d8f7b9fc5970bdd94287905ef584
         'Termwind\\ValueObjects\\Style' => __DIR__ . '/..' . '/nunomaduro/termwind/src/ValueObjects/Style.php',
         'Termwind\\ValueObjects\\Styles' => __DIR__ . '/..' . '/nunomaduro/termwind/src/ValueObjects/Styles.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
+        'Tests\\Feature\\StudentCrudTest' => __DIR__ . '/../..' . '/tests/Feature/StudentCrudTest.php',
+        'Tests\\Feature\\StudentMiddlewareTest' => __DIR__ . '/../..' . '/tests/Feature/StudentMiddlewareTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Tests\\Unit\\ExampleTest' => __DIR__ . '/../..' . '/tests/Unit/ExampleTest.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
