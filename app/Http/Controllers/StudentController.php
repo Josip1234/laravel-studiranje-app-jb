@@ -67,11 +67,11 @@ public function index(Request $request)
         $student->load('fakultet');
         return view('studenti.show', compact('student'));
     }
-
-    public function edit(Student $student)
+   //greška: umjesto $student promjeniti u $studenti
+    public function edit(Student $studenti)
     {
         $fakulteti = Fakultet::orderBy('naziv')->get();
-        return view('studenti.edit', compact('student', 'fakulteti'));
+        return view('studenti.edit', compact('studenti', 'fakulteti'));
     }
 
     public function update(Request $request, Student $student)

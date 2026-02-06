@@ -14,32 +14,32 @@
     </ul>
   </div>
 @endif
-<form class="form-box" method="POST" action="{{ route('studenti.update', $student) }}">
+<form class="form-box" method="POST" action="{{ route('studenti.update', $studenti) }}">
   @csrf
   @method('PUT')
 
   <label>Ime</label>
-  <input type="text" name="ime" value="{{ old('ime', $student->ime) }}">
+  <input type="text" name="ime" value="{{ old('ime', $studenti->ime) }}">
 
   <label>Prezime</label>
-  <input type="text" name="prezime" value="{{ old('prezime', $student->prezime) }}">
+  <input type="text" name="prezime" value="{{ old('prezime', $studenti->prezime) }}">
 
   <label>Datum rođenja</label>
-  <input type="date" name="datum_rod" value="{{ old('datum_rod', $student->datum_rod->format('Y-m-d')) }}">
+  <input type="date" name="datum_rod" value="{{ old('datum_rod', $studenti->datum_rod->format('Y-m-d')) }}">
 
   <label>MBR</label>
-  <input type="number" name="mbr" value="{{ old('mbr', $student->mbr) }}">
+  <input type="number" name="mbr" value="{{ old('mbr', $studenti->mbr) }}">
 
   <label>Stipendija</label>
-  <input type="number" step="0.01" name="stipendija" value="{{ old('stipendija', $student->stipendija) }}">
+  <input type="number" step="0.01" name="stipendija" value="{{ old('stipendija', $studenti->stipendija) }}">
 
   <label>Mjesto (može biti prazno)</label>
-  <input type="text" name="mjesto" value="{{ old('mjesto', $student->mjesto) }}">
+  <input type="text" name="mjesto" value="{{ old('mjesto', $studenti->mjesto) }}">
 
   <label>Fakultet</label>
   <select name="fakultetid" style="width: 80%; padding: 8px; margin-top: 5px;">
     @foreach($fakulteti as $f)
-      <option value="{{ $f->id }}" @selected(old('fakultetid', $student->fakultetid) == $f->id)>
+      <option value="{{ $f->id }}" @selected(old('fakultetid', $studenti->fakultetid) == $f->id)>
         {{ $f->naziv }} ({{ $f->mjesto }})
       </option>
     @endforeach
