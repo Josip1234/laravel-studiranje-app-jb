@@ -74,7 +74,7 @@ public function index(Request $request)
         return view('studenti.edit', compact('studenti', 'fakulteti'));
     }
 
-    public function update(Request $request, Student $student)
+    public function update(Request $request, Student $studenti)
     {
         $validated = $request->validate([
             'ime' => ['required', 'string', 'min:2', 'max:60'],
@@ -86,14 +86,14 @@ public function index(Request $request)
             'fakultetid' => ['required', 'integer', 'exists:fakulteti,id'],
         ]);
 
-        $student->update($validated);
+        $studenti->update($validated);
 
         return redirect()->route('studenti.index')->with('uspjeh', 'Student je uspješno ažuriran.');
     }
 
-    public function destroy(Student $student)
+    public function destroy(Student $studenti)
     {
-        $student->delete();
+        $studenti->delete();
         return redirect()->route('studenti.index')->with('uspjeh', 'Student je obrisan.');
     }
 }
