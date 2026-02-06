@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="hr">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,6 +8,7 @@
 
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+
 <body>
 
   <header class="site-header">
@@ -15,9 +17,9 @@
 
       <nav class="nav">
         <a href="{{ url('/') }}" class="nav-link">Početna</a>
-        <a href="{{ url('/link1') }}" class="nav-link">Link1</a>
-        <a href="{{ url('/link2') }}" class="nav-link">Link 2</a>
-        <a href="{{ url('/link3') }}" class="nav-link">Link 3</a>
+        <a  href="{{ route('studenti.index') }}" class="nav-link">Studenti</a>
+        <a  href="{{ route('fakulteti.index') }}" class="nav-link">Fakulteti</a>
+           <a  href="{{ route('about') }}" class="nav-link">O nama</a>
       </nav>
     </div>
   </header>
@@ -40,4 +42,5 @@
   </footer>
 
 </body>
+
 </html>

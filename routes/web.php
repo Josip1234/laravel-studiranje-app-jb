@@ -9,6 +9,10 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 // Fakulteti (samo prikaz svih)
 Route::get('/fakulteti', [FakultetController::class, 'index'])->name('fakulteti.index');
 
